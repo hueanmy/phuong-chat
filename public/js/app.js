@@ -18,7 +18,6 @@ socket.on('connect', function () {
 socket.on('message', function (message) {
 	var momentTimestamp = moment.utc(message.timestamp);
 	var $messages = jQuery('.messages');
-	// var $message = jQuery('<li class="list-group-item"></li>');
 	var $message = jQuery('<p></p>');
 
 	console.log('New message:');
@@ -27,6 +26,17 @@ socket.on('message', function (message) {
 	$message.append('<p><strong>' + message.name + ' ' + momentTimestamp.local().format('h:mm a') + '</strong></p>');
 	$message.append('<p>' + message.text + '</p>');
 	$messages.append($message);
+
+		    var height = 0;
+	    $('.messages p').each(function(i, value){
+	        height += parseInt($(this).height());
+	    });
+
+	    height += '';
+
+	    $('.messages').animate({scrollTop: height}, 1000);
+
+
 });
 
 // Handles submitting of new message
@@ -44,13 +54,4 @@ $form.on('submit', function (event) {
 
 	$message.val('');
 
-
-	    var height = 0;
-    $('.messages p').each(function(i, value){
-        height += parseInt($(this).height());
-    });
-
-    height += '';
-
-    $('.messages').animate({scrollTop: height});
 });
