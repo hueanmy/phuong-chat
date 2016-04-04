@@ -34,7 +34,7 @@ socket.on('message', function (message) {
 
 	    height += '';
 
-	    $('.messages').animate({scrollTop: height}, 1000);
+	    $('.messages').animate({scrollTop: height});
 
 
 });
