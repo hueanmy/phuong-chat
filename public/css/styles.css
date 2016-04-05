@@ -17,9 +17,6 @@ h1 {
 	margin: 6px 0;
 }
 @media only screen and (max-width: 284px) {
-    a {
-    	display: none;
-    }
     h1.room-title {
     	margin-top: 0;
     }
