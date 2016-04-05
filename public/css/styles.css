@@ -16,3 +16,14 @@ h1 {
 .messages p {
 	margin: 6px 0;
 }
+@media only screen and (max-width: 284px) {
+    a {
+    	display: none;
+    }
+    h1.room-title {
+    	margin-top: 0;
+    }
+    .main-area {
+    	margin-top: 0;
+    }
+}
