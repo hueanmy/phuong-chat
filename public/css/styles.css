@@ -23,7 +23,7 @@ h1 {
     h1.room-title {
     	margin-top: 0;
     }
-    .main-area {
-    	margin-top: 0;
+    div.main-area {
+    	margin: 0;
     }
 }
