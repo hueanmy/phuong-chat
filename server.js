@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 
 var clientInfo = {};
 
-// Sends current users to provided socket
+// change goes in this line
 function sendCurrentUsers (socket) {
 	var info = clientInfo[socket.id];
 	var users = [];
